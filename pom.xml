@@ -104,6 +104,20 @@
       <artifactId>spring-orm</artifactId>
       <version>${spring.version}</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api -->
+    <dependency>
+      <groupId>jakarta.servlet.jsp</groupId>
+      <artifactId>jakarta.servlet.jsp-api</artifactId>
+      <version>3.1.1</version>
+      <scope>provided</scope>
+    </dependency>
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.glassfish.web/javax.servlet.jsp.jstl &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.glassfish.web</groupId>-->
+<!--      <artifactId>javax.servlet.jsp.jstl</artifactId>-->
+<!--      <version>1.2.5</version>-->
+<!--    </dependency>-->
+
   </dependencies>
   <build>
     <finalName>CRUD_Alishev</finalName>

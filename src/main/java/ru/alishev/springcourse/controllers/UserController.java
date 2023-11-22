@@ -30,8 +30,13 @@ public class UserController {
         return "people/index";
     }
 
-    @GetMapping("/{id}")
-    public String show(@PathVariable("id") int id, Model model) {
+//    @GetMapping("/{id}")
+//    public String show(@PathVariable("id") int id, Model model) {
+//        model.addAttribute("user", userDAO.show(id));
+//        return "people/show";
+//    }
+    @GetMapping("/")
+    public String show(@RequestParam("id") int id, Model model) {
         model.addAttribute("user", userDAO.show(id));
         return "people/show";
     }
@@ -51,15 +56,29 @@ public class UserController {
         return "redirect:/people";
     }
 
-    @GetMapping("/{id}/edit")
-    public String edit(Model model, @PathVariable("id") int id) {
+    //    @GetMapping("/{id}/edit")
+//    public String edit(Model model, @PathVariable("id") int id) {
+//        model.addAttribute("user", userDAO.show(id));
+//        return "people/edit";
+//    }
+    @GetMapping("/edit")
+    public String edit(Model model, @RequestParam("id") int id) {
         model.addAttribute("user", userDAO.show(id));
         return "people/edit";
     }
 
-    @PatchMapping("/{id}")
+//        @PatchMapping("/{id}")
+//    public String update(@ModelAttribute("user") @Valid User user, BindingResult bindingResult,
+//                         @PathVariable("id") int id) {
+//        if (bindingResult.hasErrors())
+//            return "people/edit";
+//
+//        userDAO.update(id, user);
+//        return "redirect:/people";
+//    }
+    @PatchMapping
     public String update(@ModelAttribute("user") @Valid User user, BindingResult bindingResult,
-                         @PathVariable("id") int id) {
+                         @RequestParam("id") int id) {
         if (bindingResult.hasErrors())
             return "people/edit";
 
@@ -67,8 +86,8 @@ public class UserController {
         return "redirect:/people";
     }
 
-    @DeleteMapping("/{id}")
-    public String delete(@PathVariable("id") int id) {
+    @DeleteMapping
+    public String delete(@RequestParam("id") int id) {
         userDAO.delete(id);
         return "redirect:/people";
     }
