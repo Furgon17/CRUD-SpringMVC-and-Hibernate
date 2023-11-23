@@ -6,21 +6,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import ru.alishev.springcourse.dao.UserDAO;
 import ru.alishev.springcourse.models.User;
+import ru.alishev.springcourse.service.UserService;
 
-
-/**
- * @author Neil Alishev
- */
 @Controller
 @RequestMapping("/people")
 public class UserController {
 
-    private final UserDAO userDAO;
+    private final UserService userDAO;
 
     @Autowired
-    public UserController(UserDAO userDAO) {
+    public UserController(UserService userDAO) {
         this.userDAO = userDAO;
     }
 
