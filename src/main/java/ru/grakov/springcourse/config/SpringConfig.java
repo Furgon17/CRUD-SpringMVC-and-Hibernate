@@ -1,4 +1,4 @@
-package ru.alishev.springcourse.config;
+package ru.grakov.springcourse.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -22,11 +22,8 @@ import org.thymeleaf.spring6    .view.ThymeleafViewResolver;
 import javax.sql.DataSource;
 import java.util.Properties;
 
-/**
- * @author Neil Alishev
- */
 @Configuration
-@ComponentScan("ru.alishev.springcourse")
+@ComponentScan("ru.grakov.springcourse")
 @PropertySource("classpath:hibernate.properties")
 @EnableTransactionManagement
 @EnableWebMvc
@@ -99,7 +96,7 @@ public class SpringConfig implements WebMvcConfigurer {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("ru.alishev.springcourse.models");
+        sessionFactory.setPackagesToScan("ru.grakov.springcourse.models");
         sessionFactory.setHibernateProperties(hibernateProperties());
 
         return sessionFactory;

@@ -1,6 +1,6 @@
-package ru.alishev.springcourse.dao;
+package ru.grakov.springcourse.dao;
 
-import ru.alishev.springcourse.models.User;
+import ru.grakov.springcourse.models.User;
 
 import java.util.List;
 

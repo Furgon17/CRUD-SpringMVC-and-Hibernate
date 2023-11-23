@@ -1,9 +1,9 @@
-package ru.alishev.springcourse.service;
+package ru.grakov.springcourse.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.alishev.springcourse.dao.UserDAO;
-import ru.alishev.springcourse.models.User;
+import ru.grakov.springcourse.dao.UserDAO;
+import ru.grakov.springcourse.models.User;
 
 import java.util.List;
 

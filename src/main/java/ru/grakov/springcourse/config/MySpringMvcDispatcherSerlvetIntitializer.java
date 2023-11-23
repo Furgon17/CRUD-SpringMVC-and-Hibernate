@@ -1,4 +1,4 @@
-package ru.alishev.springcourse.config;
+package ru.grakov.springcourse.config;
 
 import jakarta.servlet.DispatcherType;
 import jakarta.servlet.FilterRegistration;

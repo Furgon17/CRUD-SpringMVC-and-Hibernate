@@ -1,11 +1,11 @@
-package ru.alishev.springcourse.dao;
+package ru.grakov.springcourse.dao;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ru.alishev.springcourse.models.User;
+import ru.grakov.springcourse.models.User;
 
 import java.util.List;
 
